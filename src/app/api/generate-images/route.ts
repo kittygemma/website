@@ -28,10 +28,12 @@ async function generateOne(client: GoogleGenerativeAI, prompt: string) {
     model: "gemini-2.5-flash-image",
     generationConfig: {
       responseModalities: ["Text", "Image"],
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } as any,
   });
   const result = await model.generateContent(prompt);
   const parts = result.response.candidates?.[0]?.content?.parts ?? [];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const imagePart = parts.find((p: any) => p.inlineData);
   if (!imagePart?.inlineData) {
     throw new Error("Gemini response did not contain an image");
