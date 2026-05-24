@@ -7,7 +7,7 @@ export default function Hero() {
       className="relative min-h-[500px] overflow-hidden px-6 py-24 text-center sm:min-h-[600px]"
     >
       <Image
-        src="/hero/bedroom.png"
+        src="/hero/main.png"
         alt=""
         fill
         preload

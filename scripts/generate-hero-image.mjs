@@ -7,10 +7,10 @@ process.loadEnvFile(".env.local");
 
 const MODEL_NAME = "gemini-2.5-flash-image";
 const OUT_DIR = "public/hero";
-const OUT_FILE = "bedroom.png";
+const OUT_FILE = "main.png";
 
 const PROMPT =
-  "Hello Kitty's pink bedroom interior, kawaii style, soft pink pastel colours, cute illustration, wide cozy scene with cute details, bed with pink covers, stuffed animals, hearts and bows on the walls, centered composition";
+  "Hello Kitty sitting in the window seat of a cute pink airplane, looking out the window at fluffy white clouds, with rainbows arching across the sky and magical flying unicorns visible outside the plane, kawaii style, soft pastel colours, dreamy whimsical illustration, centered composition";
 
 async function generate(client, prompt) {
   const model = client.getGenerativeModel({
